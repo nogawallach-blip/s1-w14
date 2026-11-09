@@ -17,7 +17,7 @@ public class Stage {
 		door3isClosed = true;
 		control.close (3);
 		doorWithCar = door;
-	}
+	} 
 
 	// Return true if the given door is closed; return false if it's open.
 	public boolean isClosed (int doorNumber) {
