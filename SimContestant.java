@@ -12,14 +12,33 @@ public class SimContestant {
     
     // The contestant makes his/her first guess.
     public int guess1 ( ) {
-        myInitialGuess = -1;//do this ...;
+        myInitialGuess = myRandoms.nextInt(3) + 1;//do this ...;
         return myInitialGuess;
     }
     
     //The contestant sticks, switches, or randomly 
     //sticks or switches. You find the percentages
-    public int guess2 (int openedDoor) {
+    public int guess2 (int openedDoor, int strat) {
         //do this ...;
-        return -1;
+        int mySecondGuess = myRandoms.nextInt(3) + 1;
+        if(strat == 1){
+            return myInitialGuess;
+        }
+
+        else if(strat == 2){
+            while(mySecondGuess == myInitialGuess || mySecondGuess == openedDoor){
+                mySecondGuess = myRandoms.nextInt(3) + 1;
+        }
+        
+        return mySecondGuess;
+        }
+        else{
+            int t = myRandoms.nextInt(2);
+            if(t == 0)
+                return myInitialGuess;
+            else 
+                return mySecondGuess;
+        }
+
     }
 }

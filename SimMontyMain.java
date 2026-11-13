@@ -14,9 +14,13 @@ public class SimMontyMain {
          int countRuns = 0;
          myWinTotal = 0;
          //you write this...
-        //  while(){
+          while(countRuns < numGames){
+            if(m.playGame(1) == 1)
+                myWinTotal++;
+            countRuns++;
+        
              
-        //  }
+         }
          //stop here...
          System.out.println((myWinTotal * 1.0)/numGames);
     }
